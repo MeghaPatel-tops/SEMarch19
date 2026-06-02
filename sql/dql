@@ -1,0 +1,29 @@
+DQL => data query lang.
+
+select:SELECT * FROM students;
+
+SELECT * FROM students where studentName="dipesh";
+
+SELECT studentName,email FROM students where studentName="dipesh";
+
+select studentName from students
+
+select studentName as STUDNETNAME from students;
+
+SELECT DISTINCT(studentName)  FROM `students` 
+
+SELECT *  FROM `students` ORDER BY studentName ASC;
+SELECT *  FROM `students` ORDER BY studentName DESC;
+
+SELECT * from employee where city="Surat" and salary>=45000
+SELECT * from employee where city="Surat" OR salary>=65000;
+SELECT * from employee where not city = "Surat" 
+
+SELECT * FROM `employee` LIMIT 0,5
+
+SELECT * FROM `employee` ORDER BY salary DESC LIMIT 1,1;
+
+
+SELECT sum(salary) as TotalSalary from employee;
+SELECT min(salary) as MinimumSalary from employee;
+SELECT max(salary) as MaximumSalary from employee;
