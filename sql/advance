@@ -28,12 +28,22 @@ CREATE TRIGGER empUpdateTrigger AFTER UPDATE
 ON employee FOR EACH ROW
 INSERT INTO temptbl(empid,oldname,newname,timeof)VALUES(old.empid,old.name,new.name,now());
 
+
 START TRANSACTION;
-DELETE FROM employee WHERE empid=20;
+
+UPDATE employee set email = "abc@example.com" where empid=4;
+
+
+SAVEPOINT sp1;
+UPDATE   employee set city="daman" where empid=6;
+
+
+SAVEPOINT sp2;
+DELETE from employee WHERE empid=9;
+UPDATE employee set city ="daman" where empid=1;
+
+
+ROLLBACK to sp2;
+
 
 COMMIT;
-
-START TRANSACTION;
-DELETE FROM employee WHERE empid=19;
-
-ROLLBACK;
