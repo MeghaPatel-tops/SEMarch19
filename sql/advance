@@ -1,0 +1,29 @@
+procedure:=>
+
+
+CREATE PROCEDURE getEmployees()
+SELECT * from employee;
+CALL getEmployees()
+
+
+CREATE PROCEDURE getEmpById(id int)
+SELECT * from employee WHERE empid=id
+call getEmpById(4);
+
+View:=>
+CREATE VIEW empview AS SELECT name,email, salary from employee
+
+SELECT salary from empview
+
+CREATE TABLE temptbl (tid int AUTO_INCREMENT PRIMARY KEY,empid int,timeof datetime)
+
+CREATE TRIGGER CREATE TRIGGER empUpdateTrigger AFTER UPDATE
+ON employee FOR EACH ROW
+INSERT INTO temptbl(empid ,timeof)VALUES(old.empid,now());
+
+DROP TRIGGER empUpdateTrigger
+
+
+CREATE TRIGGER empUpdateTrigger AFTER UPDATE
+ON employee FOR EACH ROW
+INSERT INTO temptbl(empid,oldname,newname,timeof)VALUES(old.empid,old.name,new.name,now());
