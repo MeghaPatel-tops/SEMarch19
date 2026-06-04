@@ -27,3 +27,13 @@ DROP TRIGGER empUpdateTrigger
 CREATE TRIGGER empUpdateTrigger AFTER UPDATE
 ON employee FOR EACH ROW
 INSERT INTO temptbl(empid,oldname,newname,timeof)VALUES(old.empid,old.name,new.name,now());
+
+START TRANSACTION;
+DELETE FROM employee WHERE empid=20;
+
+COMMIT;
+
+START TRANSACTION;
+DELETE FROM employee WHERE empid=19;
+
+ROLLBACK;
