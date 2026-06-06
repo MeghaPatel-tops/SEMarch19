@@ -1,0 +1,35 @@
+DELIMITER $$
+CREATE PROCEDURE increSalaray()
+BEGIN
+DECLARE cempid int;
+DECLARE csalary float;
+DECLARE isDone int DEFAULT false;
+DECLARE upSalary float;
+
+DECLARE emp_cur CURSOR FOR
+SELECT empid,salary from employee;
+
+DECLARE CONTINUE HANDLER FOR NOT FOUND SET isDone = TRUE;
+
+open emp_cur;
+
+ploop: LOOP
+
+FETCH emp_cur into cempid,csalary;
+
+if isDone THEN
+  LEAVE ploop;
+END if;
+
+set upSalary = csalary + (csalary * 0.1);
+UPDATE employee set salary = upSalary where empid = cempid;
+
+end loop ploop;
+
+close emp_cur;
+
+
+    
+END $$
+
+DELIMITER ;

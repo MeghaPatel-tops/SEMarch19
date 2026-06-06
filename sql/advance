@@ -47,3 +47,38 @@ ROLLBACK to sp2;
 
 
 COMMIT;
+
+==========================pl sql==============================
+
+DECLARE
+  message varchar2(100):= 'Hello, World!'; 
+  age number:=12;
+BEGIN 
+  dbms_output.put_line(message); 
+  if age >= 18 then
+     dbms_output.put_line('eligible'); 
+  else
+     dbms_output.put_line('not eligible');   
+  end if;
+END;
+/
+
+
+DECLARE
+  message varchar2(100):= 'Hello, World!'; 
+  age number:=12;
+  i number;
+BEGIN 
+  dbms_output.put_line(message); 
+  if age >= 18 then
+     dbms_output.put_line('eligible'); 
+  else
+     dbms_output.put_line('not eligible');   
+  end if;
+
+  for i in 1..10 loop
+     dbms_output.put_line('i=' || i);  
+  end loop;   
+END;
+
+
