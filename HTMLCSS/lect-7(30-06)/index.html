@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .relative-div{
+            padding: 10px;
+            background-color: gray;
+            position: relative;
+            top: 10px;
+         }
+         .sec{
+            padding: 20px;
+            background-color: red;
+            
+         }
+         .outer{
+           
+             height: 400px;
+             width: 400px;
+             border: 3px solid black;
+             position: relative;
+         }
+         .inner{
+             height: 40px;
+             width: 40px;
+             background-color: blue;
+             position: absolute;
+             bottom: 0px;
+             right: 0px;
+         }
+         .fixed-div{
+            height: 200px;
+            width: 200px;
+            border: 3px solid blue;
+            position: fixed;
+            top: 200px;
+            right: 20px;
+         }
+         .sticky-header{
+            position: sticky;
+            padding: 20px 100px;
+            background-color: black;
+            color: white;
+            top: 0px;
+            z-index: 1;
+         }
+    </style>
+</head>
+<body>
+    <div class="relative-div">
+        relative-div
+        <!-- <div class="inner"></div> -->
+    </div>
+    <div class="sticky-header">
+        Sticky header
+    </div>
+    <div class="sec"></div>
+
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+    <div class="fixed-div">
+        fixed-div
+    </div>
+     <div class="outer">
+        <div class="inner"></div>
+    </div>
+     <div class="outer">
+        <div class="inner"></div>
+    </div>
+     <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+</html>
