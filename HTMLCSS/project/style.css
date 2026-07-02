@@ -44,3 +44,112 @@ li:hover,li:nth-child(1){
    border: none;
    color: white;
 }
+.hero-text{
+    padding: 0px 100px;
+    height: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.hero-text h1{
+    font-size: 5em;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+.hero-text p{
+    font-size: 1.5em;
+      margin-bottom: 30px;
+}
+.btn{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+     font-size: 1em;
+}
+.redbtn{
+    background-color: red;
+    color: white;
+   
+}
+.lightbtn{
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+}
+.redbtn:hover{
+    background-color: white;
+    color: red;
+}
+.lightbtn:hover{
+    background-color: red;
+    color: white;
+}
+section{
+    padding: 100px;
+}
+.about-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.about-img img{
+    height: 100%;
+    width: 100%;
+}
+.about-text{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.subhead{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 2.5em;
+    color: rgb(65, 63, 63);
+}
+.thirdhead{
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: rgb(78, 74, 74);
+}
+.service-div{
+    margin:  100px 0px;
+}
+.service-row{
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+.service-col{
+    box-shadow: 3px 3px 4px black;
+}
+.div-img{
+    height: 250px;
+}
+.service-col img{
+     width: 100%;
+    height: 100%;
+}
+.text-div{
+
+    padding: 30px;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.border-btn{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+.text-div:hover{
+    background-color: brown;
+}
