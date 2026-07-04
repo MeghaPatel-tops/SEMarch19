@@ -45,13 +45,29 @@ li:hover,li:nth-child(1){
    color: white;
 }
 .hero-text{
+    
     padding: 0px 100px;
     height: 500px;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transform: translate(1000px,0);
+    animation-name: textMove;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
    
+}
+
+@keyframes textMove {
+    0%{
+         transform: translate(1000px,0);
+    }
+    100%{
+         transform: translate(0px,0);
+    }
 }
 .hero-text h1{
     font-size: 5em;
@@ -103,6 +119,20 @@ section{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    transform: translateY(10px);
+     animation-name: textUp;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes textUp {
+    0%{
+         transform: translateY(10px);
+    }
+    100%{
+         transform: translateY(-10px);
+    }
 }
 .subhead{
     text-transform: uppercase;
@@ -110,6 +140,7 @@ section{
     font-size: 2.5em;
     color: rgb(65, 63, 63);
 }
+
 .thirdhead{
     text-transform: uppercase;
     font-weight: 500;

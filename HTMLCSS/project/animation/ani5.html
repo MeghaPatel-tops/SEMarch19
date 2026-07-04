@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 200px;
+            width: 400px;
+            position: relative;
+            
+        }
+        .main img{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .main:hover{
+            
+            background-color:rgba(0,0,0,0.7);
+        }
+        .main:hover img{
+            visibility: hidden;
+        }
+        button{
+            position: absolute;
+            visibility: hidden;
+           opacity: 0;
+            top: 40%;
+            left: 40%;
+            transition: opacity 4s ease,visibility 0.4s ease;
+        }
+        .main:hover button{
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <img src="../images/banner-bg.png" alt="">
+        <button>Read More</button>
+    </div>
+</body>
+</html>
